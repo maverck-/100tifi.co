@@ -16,6 +16,6 @@ cache:
 node_js:          #version de node
   - 12
 git:
-  depth:3         #va leer hasta el tercer nivel
+  depth: 3         #va leer hasta el tercer nivel
 script:
   - yarn build                #comando a ejecutar nuestro proyecto
