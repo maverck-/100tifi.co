@@ -14,7 +14,7 @@ cache:
   directories:  
     - ~/.npm      #ubicacion de nuestro directorio
 node_js:          #version de node
-  - 12
+  - 16
 git:
   depth: 3         #va leer hasta el tercer nivel
 script:
