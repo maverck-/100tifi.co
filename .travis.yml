@@ -10,11 +10,11 @@ script:
   - yarn build                #comando a ejecutar nuestro proyecto
 deploy:
   provider: pages             #donde va estar alojado
-  edge:true                   #control de versiones
-  skip-cleanup:true           #estructura de compilaciones
-  keep-history:true           #historial
+  edge: true                   #control de versiones
+  skip-cleanup: true           #estructura de compilaciones
+  keep-history: true           #historial
   local-dir: dist/            #directorio sobre el cual vamos a trabajar
   target-branch: gh-pages 
-  commit_message:"Deploy Release" #nombre al commint
+  commit_message: "Deploy Release" #nombre al commint
   on:
     branch: main                #sobre quien va actuar```
