@@ -1,7 +1,21 @@
 deploy:
   provider: pages
+  edge: true
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
+  local-dir: dist/            #directorio sobre el cual vamos a trabajar
+  target-branch: gh-pages 
+  commit_message: "Deploy Release" #nombre al commint
   on:
     branch: main
+language: node_js #establecer lenguaje
+cache:            
+  directories:  
+    - ~/.npm      #ubicacion de nuestro directorio
+node_js:          #version de node
+  -"12"
+git:
+  depth:3         #va leer hasta el tercer nivel
+script:
+  - yarn build                #comando a ejecutar nuestro proyecto
